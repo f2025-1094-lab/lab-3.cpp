@@ -1,0 +1,41 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() {
+    string name1;
+    int quantity1;
+    double price1;
+    string name2;
+    int quantity2;
+    double price2;
+    cout << "Enter the name of the first product: ";
+    getline(cin, name1);
+    cout << "Enter the quantity of the first product: ";
+    cin >> quantity1;
+    cout << "Enter the unit price of the first product: ";
+    cin >> price1;
+    cin.ignore();
+    cout << "Enter the name of the second product: ";
+    getline(cin, name2);
+    cout << "Enter the quantity of the second product: ";
+    cin >> quantity2;
+    cout << "Enter the unit price of the second product: ";
+    cin >> price2;
+    double total1 = quantity1 * price1;
+    double total2 = quantity2 * price2;
+    cout << fixed << setprecision(2);
+    cout << "\n" << left << setw(20) << "Product Name"
+         << right << setw(10) << "Quantity"
+         << setw(15) << "Unit Price"
+         << setw(15) << "Total Cost" << endl;
+    cout << string(60, '-') << endl;
+    cout << left << setw(20) << name1
+         << right << setw(10) << quantity1
+         << setw(15) << price1
+         << setw(15) << total1 << endl;
+    cout << left << setw(20) << name2
+         << right << setw(10) << quantity2
+         << setw(15) << price2
+         << setw(15) << total2 << endl;
+    return 0;
+}
